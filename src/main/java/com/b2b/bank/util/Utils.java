@@ -41,6 +41,7 @@ public class Utils {
 	public List<Klient> stworzListeKlientow() {
 		List<Klient> klienci = new ArrayList<Klient>();
 		boolean czyTworzycKlienta = true;
+		
 		do {
 			System.out.println("Czy stworzyć klienta?");
 			czyTworzycKlienta = scanner.nextBoolean();
@@ -50,12 +51,14 @@ public class Utils {
 															// moze zaczynac sie
 															// od cyfry;
 				String imie = scanner.next();
+				
 				klient.setImie(imie);
 				System.out.println("Podaj nazwisko klienta");
 				String nazwisko = scanner.next();
 				klient.setNazwisko(nazwisko);
 				System.out.println("Podaj rok urodzenia klienta");
-				int rokUrodzenia = scanner.nextInt(); //warunek na rokUrodzenia
+				int rokUrodzenia = scanner.nextInt();
+				
 				klient.setRokUrodzenia(rokUrodzenia);
 				System.out.println("Podaj stan konta");
 				double stanKonta = scanner.nextDouble();
@@ -66,5 +69,7 @@ public class Utils {
 
 		return klienci;
 	}
+
+	
 
 }
